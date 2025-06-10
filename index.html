@@ -22,33 +22,38 @@
     }
 
     .dashboard a {
-      /* make the link fill its grid cell */
       display: flex;
       width: 100%;
       height: 100%;
       justify-content: center;
       align-items: center;
-      /* ensure multi-line text is centered */
       text-align: center;
-      background-color: #e53935;
+      background-color: #e53935; /* default red */
       color: #fff;
       text-decoration: none;
       font-size: 16px;
       font-weight: bold;
       border-radius: 6px;
       transition: background-color 0.2s ease;
-      /* optional horizontal padding so text wraps nicely */
       padding: 0 8px;
     }
     .dashboard a:hover {
       background-color: #d32f2f;
     }
+
+    /* override for blue buttons */
+    .dashboard a.blue {
+      background-color: #1e88e5; /* blue */
+    }
+    .dashboard a.blue:hover {
+      background-color: #1565c0;
+    }
   </style>
 </head>
 <body>
   <div class="dashboard">
-    <a href="https://inventory-app-bxr3.onrender.com/user.html">SHRINK</a>
-    <a href="https://inventory-counts.onrender.com/user.html">INVENTORY COUNTS</a>
+    <a href="https://inventory-app-bxr3.onrender.com/user.html" class="blue">SHRINK</a>
+    <a href="https://inventory-counts.onrender.com/user.html" class="blue">INVENTORY COUNTS</a>
     <a href="https://inventory-app-bxr3.onrender.com/admin.html">SHRINK ADMIN</a>
     <a href="https://inventory-counts.onrender.com/admin.html">INVENTORY COUNTS ADMIN</a>
   </div>
