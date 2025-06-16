@@ -1,49 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Admin Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Dashboard</title>
   <style>
-    body {
+    /* Reset defaults */
+    * {
       margin: 0;
-      height: 100vh;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #f5f5f5;
-      font-family: Arial, sans-serif; /* added font */
+      min-height: 100vh;
+      padding: 20px;
     }
 
     .dashboard {
       display: grid;
-      grid-template-columns: repeat(2, 200px);
-      grid-auto-rows: 80px;
-      gap: 20px;
+      /* two flexible columns */
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    /* Make the first button span both columns */
+    .dashboard a:first-child {
+      grid-column: 1 / -1;
     }
 
     .dashboard a {
       display: flex;
-      width: 100%;
-      height: 100%;
       justify-content: center;
       align-items: center;
       text-align: center;
-      background-color: #e53935; /* default red */
+      background-color: #e53935; /* red */
       color: #fff;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: bold;
       border-radius: 6px;
+      padding: 1rem;
       transition: background-color 0.2s ease;
-      padding: 0 8px;
-      font-family: inherit; /* ensure links inherit */
     }
     .dashboard a:hover {
       background-color: #d32f2f;
     }
 
-    /* override for blue buttons */
+    /* blue button overrides */
     .dashboard a.blue {
       background-color: #1e88e5;
     }
@@ -54,10 +65,11 @@
 </head>
 <body>
   <div class="dashboard">
-    <a href="https://inventory-app-bxr3.onrender.com/user.html" class="blue">SHRINK</a>
+    <a href="https://karshba.github.io/HGC_USER_DASH/">USER PAGE</a>
     <a href="https://inventory-counts.onrender.com/user.html" class="blue">INVENTORY COUNTS</a>
-    <a href="https://inventory-app-bxr3.onrender.com/admin.html">SHRINK ADMIN</a>
     <a href="https://inventory-counts.onrender.com/admin.html">INVENTORY COUNTS ADMIN</a>
+    <a href="https://inventory-app-bxr3.onrender.com/user.html" class="blue">SHRINK</a>
+    <a href="https://inventory-app-bxr3.onrender.com/admin.html">SHRINK ADMIN</a>
   </div>
 </body>
 </html>
