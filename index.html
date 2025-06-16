@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard</title>
+  <title>Responsive Dashboard</title>
   <style>
     /* Reset defaults */
     * {
@@ -54,6 +54,15 @@
       background-color: #d32f2f;
     }
 
+    /* yellow button override for USER PAGE */
+    .dashboard a.yellow {
+      background-color: #fdd835;
+      color: #000;
+    }
+    .dashboard a.yellow:hover {
+      background-color: #fbc02d;
+    }
+
     /* blue button overrides */
     .dashboard a.blue {
       background-color: #1e88e5;
@@ -65,7 +74,7 @@
 </head>
 <body>
   <div class="dashboard">
-    <a href="https://karshba.github.io/HGC_USER_DASH/">USER PAGE</a>
+    <a href="https://karshba.github.io/HGC_USER_DASH/" class="yellow">USER PAGE</a>
     <a href="https://inventory-counts.onrender.com/user.html" class="blue">INVENTORY COUNTS</a>
     <a href="https://inventory-counts.onrender.com/admin.html">INVENTORY COUNTS ADMIN</a>
     <a href="https://inventory-app-bxr3.onrender.com/user.html" class="blue">SHRINK</a>
