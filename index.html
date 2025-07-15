@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="refresh" content="0; www.totetally.net/admin_home.html" />
-  <title>Redirecting...</title>
+  <!-- 1) add “url=”  2) use the full https:// address -->
+  <meta http-equiv="refresh" content="0; url=https://www.totetally.net/admin_home.html" />
+  <title>Redirecting…</title>
 </head>
 <body>
-  <p>If you are not redirected, <a href="www.totetally.net/admin_home.html">click here</a>.</p>
+  <p>If you are not redirected, 
+     <a href="https://www.totetally.net/admin_home.html">click here</a>.
+  </p>
+
+  <!-- JavaScript fallback (optional but useful for very old browsers) -->
+  <script>
+    window.location.replace('https://www.totetally.net/admin_home.html');
+  </script>
 </body>
 </html>
